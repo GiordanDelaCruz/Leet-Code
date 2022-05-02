@@ -1,5 +1,10 @@
-# LeetCode
-# Question 1: Solution
+#!/usr/bin/env python
+
+"""solution.py: This python file contains my solution to the 'Two Sum' problem on LeetCode."""
+
+__author__      = "Giordan Andrew"
+__copyright__   = "March 28, 2022"
+
 class Solution:
     def twoSum(self, nums, target):
         
@@ -23,7 +28,9 @@ class Solution:
                 #add current_num into our prev_nums dict
                 seen[value] = idx
       
-
+#----------------------------------------------------------------------------------------------------
+#------------------                   TESTING & DEBUGGING                               -------------
+#----------------------------------------------------------------------------------------------------
 def main():
     soluObj = Solution()
 

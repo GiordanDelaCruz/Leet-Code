@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+
+"""solution.py: This python file contains my solution to the 'Palindrome Number' problem on LeetCode."""
+
+__author__      = "Giordan Andrew"
+__copyright__   = "April 10, 2022"
+
 import math
 
 class Solution:
@@ -43,7 +50,10 @@ class Solution:
         numOfDigits = int(math.log10(x))+1
         
         return numOfDigits
-        
+
+#----------------------------------------------------------------------------------------------------
+#------------------                   TESTING & DEBUGGING                               -------------
+#----------------------------------------------------------------------------------------------------   
 def main():
     solutionObj = Solution()
     solutionObj.isPalindrome(121)

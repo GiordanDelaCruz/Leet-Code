@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+
+"""solution.py: This python file contains my solution to the 'Roman To Integer' problem on LeetCode."""
+
+__author__      = "Giordan Andrew"
+__copyright__   = "May 5, 2022"
+
 class Solution:
     def romanToInt(self, s: str) -> int:
         # Check if invalid input 
@@ -66,6 +73,9 @@ class Solution:
                 
         return intVal
 
+#----------------------------------------------------------------------------------------------------
+#------------------                   TESTING & DEBUGGING                               -------------
+#----------------------------------------------------------------------------------------------------
 def main():
     solutionObj = Solution()
     romanVal = "DCXXI"
