@@ -1,16 +1,16 @@
+#!/usr/bin/env python
+
+"""solution.py: This python file contains my solution to the 'Adding Two Numbers' problem on LeetCode."""
+
+__author__      = "Giordan Andrew"
+__copyright__   = "July 29, 2022"
+
 class Solution:
     def removeDuplicates(self, nums: list[int]) -> int:
         # Check edge cases
         if len(nums) == 1:
             return len(nums)
-
-        # Determine how many duplicates exist in the list
-        # for i in range(len(nums)-2, -1, -1):
-        #     # Remove the dulicated element from list
-        #     if nums[i] == nums[i+1]:
-        #         nums.remove(nums[i])
-        # print(nums)
-
+    
         k=0
         currentInt = -101
         for e in nums:
@@ -19,8 +19,6 @@ class Solution:
                 nums[k] = e
                 k = k + 1
         return k
-
-        # return len(nums)
 
 def main():
     solutionObj = Solution()
