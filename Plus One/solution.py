@@ -9,13 +9,12 @@ class Solution:
         num = 0
         for idx, val in enumerate(digits):
             num += val * pow(10, len(digits)-(idx+1))
-        print(num)
 
         num += 1
         new_list = []
         for idx, val in enumerate(str(num)):
             new_list.append(int(val))
-        print(new_list)
+
         return new_list
 def main():
     solutionObj = Solution()
