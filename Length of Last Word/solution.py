@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""solution.py: This python file contains my solution to the 'Length of Last WOrd' problem on LeetCode."""
+"""solution.py: This python file contains my solution to the 'Length of Last Word' problem on LeetCode."""
 
 __author__      = "Giordan Andrew"
 __copyright__   = "Nov 24, 2022"
