@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-"""solution.py: This python file contains my solution to the 'Plus One' problem on LeetCode."""
+"""solution.py: This python file contains my solution to the 'Add Binary' problem on LeetCode."""
 
 __author__      = "Giordan Andrew"
-__copyright__   = "Nov 26, 2022"
+__copyright__   = "Nov 27, 2022"
 class Solution:
     def addBinary(self, a, b):
         idx_1 = len(a) - 1
