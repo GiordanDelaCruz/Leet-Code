@@ -25,8 +25,6 @@ class Solution:
             else:
                 low = mid + 1
           
-            
-
 def main():
     solutionObj = Solution()
     input = 15
