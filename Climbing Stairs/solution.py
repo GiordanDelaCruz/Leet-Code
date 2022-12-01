@@ -4,18 +4,21 @@
 
 __author__      = "Giordan Andrew"
 __copyright__   = "Nov 29, 2022"
+
+steps_memory = {1:1, 2:2}
 class Solution:
     def climbStairs(self, n):
-        # Edge cases
-        if n == 1:
-            return 1
-        elif n == 2:
-            return 2
+        if n in steps_memory:
+            return steps_memory[n]
         else:
-            return self.climbStairs(n-1) + self.climbStairs(n-2)
+            steps_memory[n] = self.climbStairs(n-1) + self.climbStairs(n-2)
+            return steps_memory[n]
 
 def main():
     solutionObj = Solution()
-    input = 4
+    input = 8
     output = solutionObj.climbStairs(input)
     print("The output is {}".format(output))
+    print(steps_memory)
+
+main()
