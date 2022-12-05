@@ -14,7 +14,7 @@ class TreeNode:
 class Solution:
     def inorderTraversal(self, root):
         # Edge case no root
-        # if not root: return []
+        if not root: return []
 
         node_vals = []
         if root: 
