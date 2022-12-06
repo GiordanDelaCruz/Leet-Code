@@ -3,7 +3,7 @@
 """solution.py: This python file contains my solution to the 'Same Tree' problem on LeetCode."""
 
 __author__      = "Giordan Andrew"
-__copyright__   = "Dec 3, 2022"
+__copyright__   = "Dec 5, 2022"
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
