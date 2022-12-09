@@ -1,66 +1,51 @@
 #!/usr/bin/env python
 
-"""solution.py: This python file contains my solution to the 'Longest Palindromic Substring' problem on LeetCode."""
-
+"""solution.py: This python file contains my solution to the 'Longest Palindromic Substring' problem on LeetCode.
+    Note: A solution from Nick White helped me in understanding and solving this problem in 
+         O(n^(2)) time. 
+         
+   Link to Video: https://www.youtube.com/watch?v=y2BD4MJqV20"""
 __author__      = "Giordan Andrew"
-__copyright__   = "Dec 7, 2022"
+__copyright__   = "Dec 7 - Dec 9, 2022"
 
 class Solution:
     def longestPalindrome(self, s: str) -> str:
 
-        substring_list = []
-        temp_str = ''
+        # Edge case
+        if len(s) == 1:
+            return s
+        elif s == None:
+            return ''
+
+        start, end = 0, 0
+
         for i in range(0, len(s)):
-            for j in range(i, len(s)):
-                temp_str += s[j]
-                if temp_str[0] == temp_str[len(temp_str)-1]:
-                    substring_list.append(temp_str)
-            temp_str =''
+            len_1 = expandInMiddle(s, i, i) #even strings
+            len_2 = expandInMiddle(s, i, i+1) #odd strings
+            max_len = max(len_1, len_2)
+            
+            if max_len >  end - start:
+                start = i - (max_len - 1)//2
+                end = i + max_len//2
+                print("start = {}".format(start))
+                print("end = {}".format(end))
 
-        print("substring_list = {}\n".format(substring_list))
+        return s[start:end+1]
 
-        # Determine if substrings are a palindrome
-        left_idx = 0
-        right_idx = len(s)
-        is_palindorme = True
-        palindrome_list = []
+def expandInMiddle(s, left, right):
+    if(s == None or left > right): return 0
 
-        for i in range(0, len(substring_list)):
-            left_idx = 0
-            right_idx = len(substring_list[i]) - 1
+    while left >= 0 and right < len(s) and s[left] == s[right]:
+        left -= 1
+        right += 1
+    return right - left -1
 
-            while left_idx <= right_idx:
-                # print("left_idx = {}".format(left_idx))
-                # print("right_idx = {}".format(right_idx))
-
-                if substring_list[i][left_idx] != substring_list[i][right_idx]:
-                    is_palindorme = False
-                    break
-
-                left_idx +=1
-                right_idx -= 1
-
-
-            if is_palindorme:
-                palindrome_list.append(substring_list[i])
-          
-            is_palindorme = True
-        
-        print("palindrome_list = {}".format(palindrome_list))
-
-        max_len = 0
-        longest_pal_sub_str = ''
-        for idx, val in enumerate(palindrome_list):
-            if len(val) > max_len:
-                max_len = len(val)
-                longest_pal_sub_str = val
-        
-        return longest_pal_sub_str
 
 def main(): 
     input = 'babad'
     # input = 'racecar'
     input = 'aacabdkacaa'
+    input = 'gjkkjgs'
     solutionObj = Solution()
     output = solutionObj.longestPalindrome(input)
     print("The longest palindromic substring is {}".format(output))
