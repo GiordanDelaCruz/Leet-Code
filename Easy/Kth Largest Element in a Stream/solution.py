@@ -13,19 +13,20 @@ class KthLargest:
 
     def add(self, val): 
         self.int_stream.append(val) #Add element into the integer data stream
-
+        self.int_stream = sorted(self.int_stream) #Sort new integer data stream
+        self.int_to_find = self.int_stream[len(self.int_stream) - (self.k_largest_elem)]
         #DEBUGGING
-        print("Adding {} to list:\n{}".format(val, self.int_stream))
+        # print("Adding {} to list:\n{}".format(val, self.int_stream))
 
         #Check if we need to sort the new array
-        if val > self.int_to_find:
+        # if val > self.int_to_find:
             #DEBUGGING
-            print("val = {}, int_to_find = {}".format(val, self.int_to_find))
+            # print("val = {}, int_to_find = {}".format(val, self.int_to_find))
 
-            self.int_stream = sorted(self.int_stream) #Sort new integer data stream
+            # self.int_stream = sorted(self.int_stream) #Sort new integer data stream
             #DEBUGGING
-            print("After sorting:\n{}".format(self.int_stream))
-            self.int_to_find = self.int_stream[len(self.int_stream) - (self.k_largest_elem)]
+            # print("After sorting:\n{}".format(self.int_stream))
+            # self.int_to_find = self.int_stream[len(self.int_stream) - (self.k_largest_elem)]
         
         return self.int_to_find
 
@@ -33,9 +34,9 @@ class KthLargest:
 def main():
     solutionObj = KthLargest( 3, [4, 5, 8, 2])
     print("Third largest element = {}".format(solutionObj.add(3)))
-    print("\n\nThird largest element = {}".format(solutionObj.add(5)))
-    print("\n\nThird largest element = {}".format(solutionObj.add(10)))
-    print("\n\nThird largest element = {}".format(solutionObj.add(9)))
-    print("\n\nThird largest element = {}".format(solutionObj.add(4)))
+    print("Third largest element = {}".format(solutionObj.add(5)))
+    print("Third largest element = {}".format(solutionObj.add(10)))
+    print("Third largest element = {}".format(solutionObj.add(9)))
+    print("Third largest element = {}".format(solutionObj.add(4)))
 
 main()
