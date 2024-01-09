@@ -14,22 +14,20 @@ class TreeNode:
 class Solution:
         
     def rangeSumOfBST(self, root, low, high):
-        rangeSum = 0
+        def DFS(root):
 
-        # Inorder traversal
-        if root:
-            # [Left Subtree]
-            self.rangeSumOfBST(root.left, low, high)
-
-            # [Root]
-            # Add value if it is within the range
-            if root.val >= low or root.val <= high:
-                rangeSum += root.val
-
-            # [Right Subtree]
-            self.rangeSumOfBST(root.right, low, high)
-
-        return rangeSum
+            if root == None:
+                return 0
+            
+            # Traverse through tree
+            if root:
+                # Add value to sum if its in the range
+                if root.val >= low and root.val <= high:
+                    return root.val + DFS(root.left) + DFS(root.right)
+                else:
+                    return 0 + DFS(root.left) + DFS(root.right)
+                
+        return DFS(root)
     
 def main():
     # Test Data A
