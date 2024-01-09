@@ -22,22 +22,24 @@ class Soltuion:
             # Inorder traversal
             leaf_list = []
             if root:
+
+                leaf_list += DFS(root.left)
+
                 # Check if it is a leaf
                 if root.left == None and root.right == None:
                     # Add node to leaf list
-                    leaf_list += DFS(root.left)
                     leaf_list.append(root.val)
-                    leaf_list += DFS(root.right)
+
+                leaf_list += DFS(root.right)
             return leaf_list
         
 
         # Determine leaves
         leaf_list_a = DFS(root1)
         leaf_list_b = DFS(root2)
-
         # DEBUGGING
-        print(leaf_list_a)
-        print(leaf_list_b)
+        print("[Leaf List 1]: {}".format(leaf_list_a))
+        print("[Leaf List 2]: {}\n".format(leaf_list_b))
 
         # Check if there are equal number of leaves between both trees 
         if len(leaf_list_a) != len(leaf_list_b):
