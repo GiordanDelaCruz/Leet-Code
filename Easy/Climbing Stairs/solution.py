@@ -22,3 +22,27 @@ def main():
     print(steps_memory)
 
 main()
+
+
+# *********************************************************************************
+# ******                     Another Solution Attempt                **************
+# ******                      Date : January 17, 2023                **************
+# *********************************************************************************
+# import functools
+
+# class Solution:
+#     @functools.cache
+#     def climbStairs(self, n: int) -> int:
+#         # Used for memoization
+#         memo = {1: 1, 2: 2}
+
+#         if n in memo:
+#             return memo[n]
+#         else:
+#             distinctWays = self.climbStairs(n-1) + self.climbStairs(n-2)
+#             memo[n] = distinctWays
+#             print(memo)
+#             return distinctWays
+
+    
+       
