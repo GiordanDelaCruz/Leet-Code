@@ -1,10 +1,5 @@
 #!/usr/bin/env python
 """solution.py: This python file contains my solution to the 'Divide Players Into Teams of Equal Skill' problem on LeetCode.
-                
-                Note: A solution from with aarzoo on leetcode and a solution from Code Thoughts on 
-                      YouTube helped me understand and solve the problem.   
-
-                Link to video: https://www.youtube.com/watch?v=1hjPA6YbulE    
 """
 __author__      = "Giordan Andrew"
 __copyright__   = "October 4, 2024"
