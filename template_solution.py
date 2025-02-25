@@ -6,7 +6,7 @@
                 Link to video: [URL_LINK]
 """
 __author__      = "Giordan Andrew"
-__copyright__   = "October 4, 2024"
+__date__   = "October 4, 2024"
 
 class Solution:
     def functionName():
