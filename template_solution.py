@@ -5,11 +5,11 @@
 
                 Link to video: [URL_LINK]
 """
-__author__      = "Giordan Andrew"
+__author__ = "Giordan Andrew"
 __date__   = "October 4, 2024"
 
 class Solution:
-    def functionName():
+    def functionName(self):
         pass
 
 def main():

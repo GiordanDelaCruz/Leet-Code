@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """solution.py: This python file contains my solution to the 'Path Sum' problem on LeetCode.
                 
-                Note: A solution from with [USER] on [PLATFORM] helped me understand and solve the problem.   
+                Note: A solution from CodingNinja on YouTube helped me understand and solve the problem.   
 
-                Link to video: [URL_LINK]
+                Link to video: https://www.youtube.com/watch?v=pAZ3HqA7awU&t=1s
 """
 __author__ = "Giordan Andrew"
 __date__   = "February 25, 2025"
