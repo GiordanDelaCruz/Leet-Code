@@ -37,7 +37,7 @@ def main():
     output1 = solutionObj.generate(numRows)
 
     # Display Results
-    print("\n[Output1]: For numRows = {}, the Pascal's Trianngle is the following;\n{}".format(numRows, output1))
+    print("\n[Output1]: For numRows = {}, the Pascal's Triangle is the following;\n{}".format(numRows, output1))
 
 main()
 
